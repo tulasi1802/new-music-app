@@ -30,7 +30,7 @@ function CarouselPlayer() {
     const audio = audioRef.current;
     if (!audio) return;
 
-    const newPlaylist = ['/song.mp3.mp3', '/music.mp3.mp3'];
+    const newPlaylist = ['/song.mp3.mp3', '/song1.mp3.mp3'];
 
     if (currentId === album.id) {
       if (isPlaying) {

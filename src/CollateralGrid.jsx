@@ -17,8 +17,8 @@ const movies = [
     title: 'Hi Nanna',
     image: 'hinanna.avif',
     songs: [
-      { id: 4, title: 'Hello Hello', src: 'hello_hello.mp3.mp3', lyrics: `Hello Hello, nanna...` },
-      { id: 5, title: 'Nanna Prema', src: 'nanna_prema.mp3.mp3', lyrics: `Nanna Prema, nanna...` },
+      { id: 4, title: 'Hello Hello', src: 'song1.mp3.mp3', lyrics: `Hello Hello, nanna...` },
+      { id: 5, title: 'Nanna Prema', src: 'song1.mp3.mp3', lyrics: `Nanna Prema, nanna...` },
     ],
   },
   {
@@ -26,9 +26,9 @@ const movies = [
     title: 'Aagadu',
     image: 'aagadu.jfif',
     songs: [
-      { id: 1, title: 'Aaja Saroja', src: 'aaja_saroja.mp3.mp3', lyrics: `Aaja Saroja, chukkallo...` },
-      { id: 2, title: 'Balamani', src: 'balamani.mp3.mp3', lyrics: `Balamani, naa...` },
-      { id: 3, title: 'Ringa Ringa', src: 'ringa_ringa.mp3.mp3', lyrics: `Ringa Ringa, Ringa Ringa...` },
+      { id: 1, title: 'Aaja Saroja', src: 'song1.mp3.mp3', lyrics: `Aaja Saroja, chukkallo...` },
+      { id: 2, title: 'Balamani', src: 'song.mp3.mp3', lyrics: `Balamani, naa...` },
+      { id: 3, title: 'Ringa Ringa', src: 'song1.mp3.mp3', lyrics: `Ringa Ringa, Ringa Ringa...` },
     ],
   },
   {
@@ -36,8 +36,8 @@ const movies = [
     title: 'Ala Vaikunthapurramuloo',
     image: 'orange.jpg',
     songs: [
-      { id: 6, title: 'Butta Bomma', src: 'butta_bomma.mp3.mp3', lyrics: `Neeli Neeli akasam...` },
-      { id: 7, title: 'Samajavaragamana', src: 'samajavaragamana.mp3.mp3', lyrics: `Samajavaragamana...` },
+      { id: 6, title: 'Butta Bomma', src: 'song1.mp3.mp3', lyrics: `Neeli Neeli akasam...` },
+      { id: 7, title: 'Samajavaragamana', src: 'song.mp3.mp3', lyrics: `Samajavaragamana...` },
     ],
   },
   {
@@ -45,8 +45,8 @@ const movies = [
     title: 'Sita Ramam',
     image: 'sitaramam.webp',
     songs: [
-      { id: 10, title: 'Inthandham', src: 'inthandham.mp3.mp3', lyrics: `Inthandham...` },
-      { id: 11, title: 'Oh Sita Hey Rama', src: 'oh_sita_hey_rama.mp3.mp3', lyrics: `Oh Sita... Hey Rama...` },
+      { id: 10, title: 'Inthandham', src: 'song.mp3.mp3', lyrics: `Inthandham...` },
+      { id: 11, title: 'Oh Sita Hey Rama', src: 'song1.mp3.mp3', lyrics: `Oh Sita... Hey Rama...` },
     ],
   },
   {
@@ -54,8 +54,8 @@ const movies = [
     title: 'Jathi Ratnalu',
     image: 'jathiratnalu.jfif',
     songs: [
-      { id: 12, title: 'Chitti', src: 'chitti.mp3.mp3', lyrics: `Chitti chitti bangaram kaadu...` },
-      { id: 13, title: 'Mana Jathiratnalu', src: 'mana_jathiratnalu.mp3.mp3', lyrics: `Mana Jathiratnalu...` },
+      { id: 12, title: 'Chitti', src: 'song1.mp3.mp3', lyrics: `Chitti chitti bangaram kaadu...` },
+      { id: 13, title: 'Mana Jathiratnalu', src: 'song.mp3.mp3', lyrics: `Mana Jathiratnalu...` },
     ],
   },
 ];

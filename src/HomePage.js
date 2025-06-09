@@ -1,10 +1,9 @@
 import React, { useRef, useState, useEffect } from 'react';
-// import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const HomePage = ({ username }) => {
   const mixedForYou = [
-    { id: 1, title: 'Mix 1', img: 'hinanna.avif', audio: 'song.mp3.mp3' },
+    { id: 1, title: 'Mix 1', img: 'hinanna.avif', audio: 'song1.mp3.mp3' },
     { id: 2, title: 'Mix 2', img: 'perfect.jpg', audio: 'song.mp3.mp3' },
     { id: 3, title: 'Mix 3', img: 'img1.jfif', audio: 'song.mp3.mp3' },
     { id: 4, title: 'Mix 4', img: 'img2.jpg', audio: 'song.mp3.mp3' },
@@ -25,9 +24,9 @@ const HomePage = ({ username }) => {
     { id: 1, title: 'Hit 1', img: 'espresso.jpg' },
     { id: 2, title: 'Hit 2', img: 'concert.webp' },
     { id: 3, title: 'Hit 3', img: 'taylorswift.jfif' },
-    { id: 3, title: 'Hit 3', img: 'anir.jpg' },
-    { id: 3, title: 'Hit 3', img: 'taylorswift.jfif' },
-    { id: 3, title: 'Hit 3', img: 'espresso.jpg' },
+    { id: 4, title: 'Hit 4', img: 'anir.jpg' },
+    { id: 5, title: 'Hit 5', img: 'taylorswift.jfif' },
+    { id: 6, title: 'Hit 6', img: 'espresso.jpg' },
   ];
 
   const topGrid = [
@@ -77,24 +76,22 @@ const HomePage = ({ username }) => {
     };
 
     audio.addEventListener('ended', onEnded);
-
-    return () => {
-      audio.removeEventListener('ended', onEnded);
-    };
+    return () => audio.removeEventListener('ended', onEnded);
   }, []);
 
   return (
     <div className="container py-4">
       <h1 className="mb-4 text-center fw-bold text-primary">Welcome {username}!</h1>
 
-      {/* Top Grid Section */}
+      {/* Top Grid */}
       <div className="row g-3 mb-5">
         {topGrid.map((item) => (
-          <div key={item.id} className="col-6 col-md-4 col-lg-3">
-            <div className="bg-dark text-white rounded d-flex align-items-center p-2 shadow-sm">
+          <div key={item.id} className="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div className="bg-dark text-white rounded d-flex align-items-center p-2 shadow-sm h-100">
               <img
                 src={item.img}
                 alt={item.title}
+                className="flex-shrink-0"
                 style={{ width: '60px', height: '60px', objectFit: 'cover', borderRadius: '5px' }}
               />
               <span className="ms-3 fw-semibold text-truncate">{item.title}</span>
@@ -103,12 +100,12 @@ const HomePage = ({ username }) => {
         ))}
       </div>
 
-      {/* Mixed for You Section */}
+      {/* Mixed for You */}
       <section className="mb-5">
         <h2 className="mb-4">🎧 Mixed for You</h2>
         <div className="row g-4">
           {mixedForYou.map((item) => (
-            <div key={item.id} className="col-6 col-md-4 col-lg-2">
+            <div key={item.id} className="col-6 col-sm-4 col-md-3 col-lg-2">
               <div className="card h-100 shadow-sm">
                 <img
                   src={item.img}
@@ -117,7 +114,7 @@ const HomePage = ({ username }) => {
                   style={{ height: '160px', objectFit: 'cover' }}
                 />
                 <div className="card-body text-center">
-                  <p className="card-title mb-3 fw-semibold">{item.title}</p>
+                  <p className="card-title mb-3 fw-semibold text-truncate">{item.title}</p>
                   <button
                     className={`btn btn-sm ${
                       currentPlayingId === item.id && isPlaying ? 'btn-danger' : 'btn-success'
@@ -133,21 +130,21 @@ const HomePage = ({ username }) => {
         </div>
       </section>
 
-      {/* Favorite Artists Section */}
+      {/* Favorite Artists */}
       <section className="mb-5">
         <h2 className="mb-4">🌟 Your Favorite Artists</h2>
         <div className="row g-4">
           {favoriteArtists.map((artist) => (
-            <div key={artist.id} className="col-6 col-md-4 col-lg-2 text-center">
+            <div key={artist.id} className="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
               <div className="card h-100 border-0">
                 <img
                   src={artist.img}
                   alt={artist.name}
-                  className="rounded-circle mx-auto mt-2"
+                  className="rounded-circle mx-auto mt-3"
                   style={{ width: '100px', height: '100px', objectFit: 'cover' }}
                 />
                 <div className="card-body p-2">
-                  <p className="card-text fw-medium">{artist.name}</p>
+                  <p className="card-text fw-medium text-truncate">{artist.name}</p>
                 </div>
               </div>
             </div>
@@ -155,12 +152,12 @@ const HomePage = ({ username }) => {
         </div>
       </section>
 
-      {/* Recent Hits Section */}
+      {/* Recent Hits */}
       <section>
         <h2 className="mb-4">🔥 Recent Hits</h2>
         <div className="row g-4">
           {recentHits.map((hit) => (
-            <div key={hit.id} className="col-6 col-md-4 col-lg-2">
+            <div key={hit.id} className="col-6 col-sm-4 col-md-3 col-lg-2">
               <div className="card h-100 text-center shadow-sm">
                 <img
                   src={hit.img}
@@ -169,7 +166,7 @@ const HomePage = ({ username }) => {
                   style={{ height: '160px', objectFit: 'cover' }}
                 />
                 <div className="card-body p-2">
-                  <p className="card-text fw-semibold">{hit.title}</p>
+                  <p className="card-text fw-semibold text-truncate">{hit.title}</p>
                 </div>
               </div>
             </div>
